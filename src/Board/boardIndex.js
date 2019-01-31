@@ -40,9 +40,6 @@ export default class Board extends Component {
                         <Movie film={film} />
                     )
                     }
-
-
-
                     {!loading && !error && !films && <h2>No hay información disponible</h2>}
                     {!loading && error && <h2>Ocurrio un error</h2>}
                 </div>
@@ -50,7 +47,7 @@ export default class Board extends Component {
             );
         }
         return (
-            <p>Cargando...</p>
+            <p>Cargando información...</p>
         )
 
 
