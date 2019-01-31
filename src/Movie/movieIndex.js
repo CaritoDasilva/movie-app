@@ -1,8 +1,10 @@
 import React from 'react';
 
-const Movie = ({ film }) => (
+//const urlPhoto = 'https://image.tmdb.org/t/p/w500';
+
+const Movie = (props) => (
     <div className="film">
-        {console.log(film)}
+        <li>{props.title}</li>
 
     </div>
 );
