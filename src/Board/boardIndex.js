@@ -37,9 +37,7 @@ export default class Board extends Component {
                     <h1>PELÍCULAS POPULARES</h1>
                     {loading && <p>Cargando información...</p>}
                     {this.state.films.map(film =>
-                        <div>   <h1>{film.title}</h1>
-                            <img src={film.photo} />
-                        </div>
+                        <Movie film={film} />
                     )
                     }
 
