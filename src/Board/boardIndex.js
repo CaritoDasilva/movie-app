@@ -90,8 +90,8 @@ export default class Board extends Component {
                     {loading && <p>Cargando información...</p>}
                     <button onClick={this.getLastMovie}>lasts films</button>
                     <button onClick={this.getPopularMovies}>Volver a Populares</button>
-                    {this.state.films.map(film =>
-                        <Movie film={film} />
+                    {this.state.films.map((film, index) =>
+                        <Movie key={index} film={film} />
                     )
                     }
                     {!loading && !error && !films && <h2>No hay información disponible</h2>}
