@@ -1,6 +1,5 @@
 import React from 'react';
 
-//const urlPhoto = 'https://image.tmdb.org/t/p/w500';
 
 const Movie = ({ film }) => (
     <div className="film">
