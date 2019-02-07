@@ -53,7 +53,7 @@ export default class Board extends Component {
                 })
         }
     }
-
+    statics
     getLastMovie(e) {
         e.preventDefault();
         this.setState({ films: [] });

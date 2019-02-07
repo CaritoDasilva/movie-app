@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import Board from './Board/boardIndex';
+import Router from './Router/routerIndex';
+import { withRouter } from 'react-router'
+
 import SideNavApp from './Sidenav/sideNavIndex';
 
 class App extends Component {
@@ -8,11 +10,11 @@ class App extends Component {
     return (
       <div className="App">
         <SideNavApp />
-        <h1>MIS PELIS FAVORITAS</h1>
-        <Board />
+        <h1>Movie App</h1>
+        <Router />
       </div>
     );
   }
 }
 
-export default App;
+export default withRouter(App);
