@@ -26,7 +26,7 @@ export default class SideNavApp extends Component {
 
                 <NavLink to='/home'>Pelis más Populares</NavLink>
 
-                <NavLink to='/home'>Pelis en Estreno</NavLink>
+                <NavLink to='/estrenos'>Pelis en Estreno</NavLink>
                 <SideNavItem divider />
                 <SideNavItem subheader>Perfil</SideNavItem>
                 <NavLink to='/favoritos'>Mi colección</NavLink>
