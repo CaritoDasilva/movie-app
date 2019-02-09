@@ -1,14 +1,21 @@
-`/*global firebase*/`
+/*global firebase*/
+
 import React from 'react';
-import firestore from "./firestore";
+// eslint-disable-next-line no-unused-vars
+import firestore from "../Firebase/firestore";
+import firebase from 'firebase';
+
+
 
 
 class Favoritos extends React.Component {
     constructor() {
         super();
         this.state = {
-            npmbrePelicula: '',
+            name: '',
             description: ''
+
+
         };
         this.addFavorite = this.addFavorite.bind(this);
     }
@@ -23,24 +30,24 @@ class Favoritos extends React.Component {
         e.preventDefault();
         const db = firebase.firestore();
         db.settings({
-            timestampsInSnapshots: true
         });
-        const userRef = db.collection('favoritos').add({
-            npmbrePelicula: this.state.npmbrePelicula,
+        const userRef = db.collection('favorites').add({
+            name: this.state.name,
             description: this.state.description
         });
         this.setState({
-            npmbrePelicula: '',
+            name: '',
             description: ''
         });
     };
     render() {
         return (
-            <form onSubmit={this.addUser}>
+            <form onSubmit={this.addFavorite}>
                 <input
                     type="text"
-                    name="nombrePelicula"
+                    name="name"
                     placeholder="Nombre Película"
+                    onChange={this.updateInput}
                 />
                 <input
                     type="text"
