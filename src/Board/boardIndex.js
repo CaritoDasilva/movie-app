@@ -31,6 +31,7 @@ export default class Board extends Component {
                         let film = {
                             title: data.title,
                             photo: `${urlPhoto}${data.backdrop_path}`,
+                            id: data.id
                         }
                         this.setState({ films: this.state.films.concat([film]) })
                     });
@@ -42,9 +43,11 @@ export default class Board extends Component {
                 .then(response => response.json())
                 .then(films => {
                     films.results.forEach(data => {
+                        console.log(films);
                         let film = {
                             title: data.title,
                             photo: `${urlPhoto}${data.backdrop_path}`,
+                            id: data.id
                         }
                         this.setState({ films: this.state.films.concat([film]) })
                     });

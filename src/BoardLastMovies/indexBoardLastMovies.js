@@ -30,6 +30,7 @@ export default class LastMovies extends Component {
                         let film = {
                             title: data.title,
                             photo: `${urlPhoto}${data.poster_path}`,
+                            id: data.id
                         }
                         console.log(data);
                         this.setState({ films: this.state.films.concat([film]) })
@@ -37,6 +38,7 @@ export default class LastMovies extends Component {
                         let film = {
                             title: data.title,
                             photo: `${urlPhoto}${data.backdrop_path}`,
+                            id: data.id
                         }
 
                         console.log(data);
